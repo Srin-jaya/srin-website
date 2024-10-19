@@ -1,30 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Srinidhi's Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="images/srin-logo.png" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-text">
-            <p>Aspiring Product Manager</p>
-            <h1>Hi, I'm <span>Srinidhi</span><br>From New York, NY</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Srinidhi Jayaprakash</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Srinidhi Jayaprakash</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </div>
-</div>
-
-</body>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/srin-pfp.png" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Srinidhi</h1>
+        <p class="section__text__p2">Aspiring PM</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/SrinidhiJayaprakashResume.pdf')"
+          >
+            Resume
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/srinidhi-jay2023/'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/srin-chair.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>3+ years - Machine Learning and Data Eng.</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/lion.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p> <span class="education-institution">Columbia University</span><br />B.S Computer Science</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+                Hi! I'm Srinidhi, a Computer Science student at Columbia University passionate about machine learning, product management, and UI/UX design. I've worked on migrating network data to AWS at Verizon and applied machine learning for space weather prediction at NASA. I also helped design a digital wellness app at DeepGenius AI. I'm always eager to learn and improve UX through technology. Feel free to connect!            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        data-target="experience"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Work</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/verizon.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Verizon</h3>
+                  <p>AI&D Data Engineering Intern</p>
+                </div>
+              </article>
+              <!-- <article>
+                <img
+                  class="icon"
+                />
+                <div>
+                  <h3>May - Sep '24</h3>
+                </div>
+              </article> -->
+              <article>
+                <img
+                  src="./assets/lion.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Ultrasound Lab</h3>
+                  <p>ML Research Intern</p>
+                </div>
+              </article>
+              <!-- <article>
+                <img
+                  class="icon"
+                />
+                <div>
+                  <h3>Jan '24 - Now</h3>
+                </div>
+              </article> -->
+              <article>
+                <img
+                  src="./assets/uncq.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>UNCW Lab</h3>
+                  <p>AI Research Intern</p>
+                </div>
+              </article>
+              <!-- <article>
+                <img
+                  class="icon"
+                />
+                <div>
+                  <h3>May '21 - Dec '23</h3>
+                </div>
+              </article> -->
+              <article>
+                <img
+                  src="./assets/nasa.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>NASA</h3>
+                  <p>ML Engineer Intern</p>
+                </div>
+              </article>
+              <!-- <article>
+                <img
+                  class="icon"
+                />
+                <div>
+                  <h3>May - Sep '22</h3>
+                </div>
+              </article> -->
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/python.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experience</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/tflow.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TensorFlow</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/figma.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>UI/UX</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/pm.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Product</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/gcp.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Data Eng.</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/htmlcss.jpg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML/CSS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        data-target="projects"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/duolingo-case-header.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Duolingo KPI Wireframe</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-5 project-btn"
+                onclick="window.open('./assets/Duolingo-Wireframe.pdf')"
+              >
+              Presentation
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/digitox-pres.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">DigiTox App Mockup</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-3 project-btn"
+                onclick="window.open('./assets/Digitox-Presentation.pdf')"
+              >
+              Presentation
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/vzonpres.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Verizon - Data Migration</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-4 project-btn"
+                onclick="window.open('./assets/Verizon-Presentation.pdf')"
+              >
+                Presentation
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        data-target="contact"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:srinidhi.jayaprakash0@gmail.com">srinidhi.jayaprakash0@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/srinidhi-jay2023/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Srinidhi Jayaprakash. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
